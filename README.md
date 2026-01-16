@@ -18,9 +18,11 @@ Born from the need for a balanced academic web presence, **AcaNova-X** is neithe
 ### 🎥 Preview
 
 <div align="center">
-  <video src="docs/example.mp4" width="100%" controls></video>
+  <a href="https://github.com/yihangtao/AcaNova-X/raw/main/docs/example.mp4">
+    <img src="docs/part1.png" width="100%" alt="Watch the Preview Video" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
   <br>
-  <i>(If the video doesn't play, please download the repository to view `docs/example.mp4` locally)</i>
+  <i>(Click the image above to watch the preview video / 点击上方图片观看演示视频)</i>
 </div>
 
 ---
