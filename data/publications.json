@@ -1,26 +1,39 @@
 [
   {
-    "title": "AcaNova-X: A Modern and Elegant Academic Website Template",
-    "authors": "<strong>Your Name</strong>, Collaborator A, Collaborator B",
-    "venue": "CVPR 2025",
-    "year": "2025",
-    "highlight": "Oral",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "title": "Autoencoding-Free Context Compression for LLMs via Contextual Semantic Anchors",
+    "authors": "<strong>Xin Liu</strong>, Runsong Zhao, Pengcheng Huang, Xinyu Liu, Junyi Xiao, Chunyang Xiao, Tong Xiao, Shengxiang Gao, Zhengtao Yu, Jingbo Zhu",
+    "venue": "ICLR 2026",
+    "year": "2026",
+    "highlight": "Poster",
+    "thumbnail": "assets/publications/placeholder/SAC.png",
     "tags": [
-      { "text": "Paper", "link": "#" },
+      { "text": "Paper", "link": "https://arxiv.org/abs/2510.08907" },
       { "text": "Code", "link": "#" },
       { "text": "Project Page", "link": "#" }
     ]
   },
   {
-    "title": "Another Great Research Work on Machine Learning",
-    "authors": "Collaborator A, <strong>Your Name</strong>, Collaborator B",
-    "venue": "NeurIPS 2024",
-    "year": "2024",
-    "highlight": "Spotlight",
-    "thumbnail": "",
+    "title": "Position IDs Matter: An Enhanced Position Layout for Efficient Context Compression in Large Language Models",
+    "authors": "Runsong Zhao,<strong> Xin Liu </strong>, Xinyu Liu, Pengcheng Huang, Chunyang Xiao, Tong Xiao, Jingbo Zhu",
+    "venue": "EMNLP 2025",
+    "year": "2025",
+    "highlight": "Poster",
+    "thumbnail": "assets/publications/placeholder/EPL.png",
     "tags": [
-      { "text": "Paper", "link": "#" }
+      { "text": "Paper", "link": "https://arxiv.org/abs/2409.14364" },
+      { "text": "Code", "link": "#" },
+      { "text": "Project Page", "link": "#" }
+    ]
+  },
+  {
+    "title": "Time-based Knowledge-aware framework for Multi-Behavior Recommendation",
+    "authors": "Xiujuan Li, Nan Wang,<strong> Xin Liu </strong>, Jin Zeng, Jinbao Li",
+    "venue": "ESWA 2024",
+    "year": "2024",
+    "highlight": "Poster",
+    "thumbnail": "assets/publications/placeholder/TIKM.png",
+    "tags": [
+      { "text": "Paper", "link": "https://www.sciencedirect.com/science/article/pii/S0957417425004622" }
     ]
   }
 ]

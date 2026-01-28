@@ -355,7 +355,7 @@ function getVenueShortName(venueStr, year) {
     let suffix = '';
     
     // Check if it is a conference that needs year suffix
-    const conferences = ['NeurIPS', 'CVPR', 'ICCV', 'ECCV', 'ICRA', 'AAAI', 'GLOBECOM', 'INFOCOM', 'MOBICOM'];
+    const conferences = ['NeurIPS', 'CVPR', 'ICCV', 'ECCV', 'ICRA', 'AAAI', 'GLOBECOM', 'INFOCOM', 'MOBICOM', 'ESWA', 'ICLR', 'ACL', 'EMNLP'];
     for (const conf of conferences) {
         if (s.includes(conf)) {
             // Get last two digits of year
@@ -416,6 +416,10 @@ function getVenueFullName(venueStr, year) {
     if (s.includes('GLOBECOM')) return `IEEE Global Communications Conference (GLOBECOM${yearSuffix})`;
     if (s.includes('INFOCOM')) return `IEEE International Conference on Computer Communications (INFOCOM${yearSuffix})`;
     if (s.includes('MOBICOM')) return `Annual International Conference on Mobile Computing and Networking (MobiCom${yearSuffix})`;
+    if (s.includes('ICLR')) return `International Conference on Learning Representations (ICLR${yearSuffix})`;
+    if (s.includes('EMNLP')) return `Conference on Empirical Methods in Natural Language Processing (EMNLP${yearSuffix})`;
+    if (s.includes('ACL')) return `Annual Meeting of the Association for Computational Linguistics (ACL${yearSuffix})`;
+    if (s.includes('ESWA')) return `Expert Systems with Applications (ESWA${yearSuffix})`;
     
     if (s.toLowerCase().includes('arxiv')) return 'arXiv preprint';
     

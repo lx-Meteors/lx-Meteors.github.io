@@ -1,14 +1,30 @@
-[
+[ {
+     "date": "2026-01-27",
+     "content": "\uD83D\uDE80 Welcome! This academic homepage was launched on January 27, 2026!",
+     "links": []
+  },
   {
-    "date": "2025-01-01",
-    "content": "Welcome to my new academic homepage! This template is available on GitHub.",
+     "date": "2026-01-26",
+     "content": "One paper titled 'Autoencoding-Free Context Compression for LLMs via Contextual Semantic Anchors' was accepted to ICLR 2026!",
+     "links": []
+  },
+  {
+     "date": "2025-08-20",
+     "content": "One paper titled 'Position IDs Matter: An Enhanced Position Layout for Efficient Context Compression in Large Language Models' was accepted to EMNLP 2025!",
+     "links": []
+  },
+  {
+    "date": "2025-05-10",
+    "content": "One paper titled 'Time-based Knowledge-aware framework for Multi-Behavior Recommendation' was accepted to ESWA 2025!",
     "links": [
-        { "text": "GitHub", "url": "https://github.com/yihangtao/AcaNova-X" }
+        { "text": "GitHub", "url": "" }
     ]
   },
   {
-     "date": "2024-12-15",
-     "content": "One paper titled 'A Novel Approach to AI' was accepted to CVPR 2025!",
-     "links": []
+    "date": "2025-01-29",
+    "content": "Meteor Navigation Station is now officially launched: Start your large model learning journey here!",
+    "links": [
+        { "text": "GitHub", "url": "" }
+    ]
   }
 ]

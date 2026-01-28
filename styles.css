@@ -429,7 +429,7 @@ details summary {
 }
 
 .pub-thumbnail-box {
-    width: 200px; /* Fixed width for thumbnail */
+    width: 30%; /* Fixed width for thumbnail */
     flex-shrink: 0;
     order: -1; /* Move to the left */
     border: none;
