@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-neo-yellow: #FFD600;
+  --color-neo-pink: #FF6B9C;
+  --color-neo-blue: #4D8BFF;
+  --color-neo-green: #00D1FF;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F0F0F0] text-black font-sans;
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+@layer components {
+  .neo-border {
+    border: 4px solid black;
+  }
+  
+  .neo-shadow {
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+  }
+
+  .neo-shadow-sm {
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  }
+
+  .neo-button {
+    border: 4px solid black;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .neo-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+  }
+
+  .neo-card {
+    background-color: white;
+    border: 4px solid black;
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+  }
+}
