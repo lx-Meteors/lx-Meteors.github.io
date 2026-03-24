@@ -501,7 +501,7 @@ const Portfolio = () => {
             {c}
           </button>
         ))}
-      </div>
+      </div>    
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <AnimatePresence mode="popLayout">
