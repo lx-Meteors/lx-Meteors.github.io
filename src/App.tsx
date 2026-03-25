@@ -117,7 +117,7 @@ const PROJECTS: Project[] = [
     image: "img/EPL.png", 
     color: "bg-neo-pink",
     url: "https://arxiv.org/abs/2408.04614" // Placeholder/Example URL
-  },
+  }, 
   { 
     id: 3, 
     title: "Time-based Knowledge-aware framework for Multi-Behavior Recommendation", 
