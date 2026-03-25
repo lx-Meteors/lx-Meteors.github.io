@@ -499,7 +499,7 @@ const Portfolio = () => {
             className={`neo-button rounded-full text-sm ${filter === c ? 'bg-black text-white' : 'bg-white'}`}
           >
             {c}
-          </button>
+          </button> 
         ))}
       </div>    
 
