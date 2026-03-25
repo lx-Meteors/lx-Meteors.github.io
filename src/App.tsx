@@ -106,7 +106,7 @@ const PROJECTS: Project[] = [
     id: 1, 
     title: "Autoencoding-Free Context Compression for LLMs via Contextual Semantic Anchors ", 
     category: "ICLR'2026", 
-    image: "/public/img/SAC.png",  
+    image: "./public/img/SAC.png",  
     color: "bg-neo-blue",
     url: "https://arxiv.org/abs/2410.01258" // Placeholder/Example URL
   },
@@ -114,7 +114,7 @@ const PROJECTS: Project[] = [
     id: 2, 
     title: "Position IDs Matter: An Enhanced Position Layout for Efficient Context Compression in Large Language Models", 
     category: "EMNLP'2025", 
-    image: "/public/img/EPL.png", 
+    image: "./public/img/EPL.png", 
     color: "bg-neo-pink",
     url: "https://arxiv.org/abs/2408.04614" // Placeholder/Example URL
   }, 
@@ -132,7 +132,7 @@ const PROJECTS: Project[] = [
 
 const IDCard = () => {
   // --- 在这里修改你的图片路径 ---
-  const idCardImageUrl = "/public/img/Meteor_Card.png"; 
+  const idCardImageUrl = "./public/img/Meteor_Card.png"; 
 
   return (
     <div className="relative group max-w-[500px] mx-auto">
@@ -323,7 +323,7 @@ const About = () => (
           <div className="neo-card p-0 overflow-hidden -rotate-3 hover:rotate-0 transition-transform duration-500">
             <div className="relative aspect-[4/5] ">
                <img 
-                src="/public/img/myself.jpg" 
+                src="./public/img/myself.jpg" 
                 alt="About" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -467,7 +467,7 @@ const Articles = () => (
       </div>
       <div className="bg-white neo-border w-48 h-48 mx-auto rounded-3xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
         <img 
-          src="/public/img/qrcode.jpg" 
+          src="./public/img/qrcode.jpg" 
           alt="微信公众号二维码" 
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
