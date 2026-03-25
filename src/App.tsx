@@ -108,7 +108,7 @@ const PROJECTS: Project[] = [
     category: "ICLR'2026", 
     image: "/img/SAC.png",  
     color: "bg-neo-blue",
-    url: "https://arxiv.org/abs/2410.01258" // Placeholder/Example URL
+    url: "https://arxiv.org/abs/2510.08907" // Placeholder/Example URL
   },
   { 
     id: 2, 
@@ -116,7 +116,7 @@ const PROJECTS: Project[] = [
     category: "EMNLP'2025", 
     image: "/img/EPL.png", 
     color: "bg-neo-pink",
-    url: "https://arxiv.org/abs/2408.04614" // Placeholder/Example URL
+    url: "https://arxiv.org/abs/2409.14364" // Placeholder/Example URL
   }, 
   { 
     id: 3, 
@@ -124,7 +124,7 @@ const PROJECTS: Project[] = [
     category: "ESWA'2024", 
     image: "https://picsum.photos/seed/proj3/600/400", 
     color: "bg-neo-green",
-    url: "https://doi.org/10.1016/j.eswa.2023.122144" // Placeholder/Example URL
+    url: "https://www.sciencedirect.com/science/article/pii/S0957417425004622" // Placeholder/Example URL
   },
 ];
 
