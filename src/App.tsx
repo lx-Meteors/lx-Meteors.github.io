@@ -106,7 +106,7 @@ const PROJECTS: Project[] = [
     id: 1, 
     title: "Autoencoding-Free Context Compression for LLMs via Contextual Semantic Anchors ", 
     category: "ICLR'2026", 
-    image: "../img/SAC.png", 
+    image: "../img/SAC.png",  
     color: "bg-neo-blue",
     url: "https://arxiv.org/abs/2410.01258" // Placeholder/Example URL
   },
