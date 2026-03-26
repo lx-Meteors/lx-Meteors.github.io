@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { ARTICLES } from './data/articles';
 import { 
   Github, 
   Twitter, 
@@ -17,17 +18,6 @@ import {
 // --- Types ---
 type Section = 'home' | 'about' | 'articles' | 'portfolio';
 
-interface Article {
-  id: number;
-  title: string;
-  date: string;
-  readTime: string;
-  excerpt: string;
-  image: string;
-  category: string;
-  url: string;
-}
-
 interface Project {
   id: number;
   title: string;
@@ -36,70 +26,6 @@ interface Project {
   color: string;
   url?: string;
 }
-
-// --- Mock Data ---
-const ARTICLES: Article[] = [
-  {
-    id: 1,
-    title: "我的计算机AI学习之路",
-    date: "2025-01",
-    readTime: "15分钟",
-    excerpt: "从初入计算机领域的迷茫，到科协学习Java、竞赛获奖，再到科研探索与实验室经历，不断挑战自我，最终保研NEU NLP Lab。",
-    image: "https://picsum.photos/seed/learning/800/600",
-    category: "NLP",
-    url: "https://mp.weixin.qq.com/s/OCChF6UmovnAAlm-q9GCJg"
-  },
-  {
-    id: 2,
-    title: "十万人阅读：我的AI大模型学习路线",
-    date: "2025-01",
-    readTime: "10分钟",
-    excerpt: "全网阅读量超10万的AI大模型学习指南。从基础理论到实战演练，为你梳理一条清晰、高效的学习路径。",
-    image: "https://picsum.photos/seed/roadmap/800/600",
-    category: "深度学习",
-    url: "https://mp.weixin.qq.com/s/fMSw-tY0fuzCaZ77tlzPMw"
-  },
-  {
-    id: 3,
-    title: "北漂大模型算法实习之旅",
-    date: "2025-02",
-    readTime: "12分钟",
-    excerpt: "记录在北京进行大模型算法实习的点点滴滴。分享面试经验、工作日常以及在工业界处理真实大模型问题的实战感悟。",
-    image: "https://mmbiz.qpic.cn/sz_mmbiz_jpg/4iccEqkCF2JUibvTxR1AFJO9Z0TWRRibjAefFavyvFibGFx3CD38JzLriaEfcqtkDu8gCZvccIKM41MRF6uZystBzkA/0?wx_fmt=jpeg&quot",
-    category: "趋势",
-    url: "https://mp.weixin.qq.com/s/WspREo5uPDR-R6Fqlb92Xg"
-  },
-  {
-    id: 4,
-    title: "Meteor导航站年终总结",
-    date: "2026-01",
-    readTime: "8分钟",
-    excerpt: "回顾过去一年的成长与收获。从公众号运营到学术研究，总结经验教训，展望未来，见证Meteor导航站的进化。",
-    image: "https://mmbiz.qpic.cn/sz_mmbiz_jpg/4iccEqkCF2JXC3j2kzErSjmpGJZ3jcW0dhCNfItI2iaZTVhvd3VrQSqnk7sIz2gkicyicdcM4bFpZeop1ibVM9icLKFg/0?wx_fmt=jpeg&quot",
-    category: "提示工程",
-    url: "https://mp.weixin.qq.com/s/F_zG9O0cQFerfOQHriiuBQ"
-  },
-  {
-    id: 5,
-    title: "在OpenBayes的成长与收获",
-    date: "2025-06",
-    readTime: "14分钟",
-    excerpt: "分享在OpenBayes算力平台的使用体验与成长故事。探讨如何利用高效的算力资源加速模型训练与技术沉淀。",
-    image: "https://mmbiz.qpic.cn/sz_mmbiz_jpg/4iccEqkCF2JXPKmlujjwcMA2fp5eNYBfUGtqgXjUqKFJS89Frv2SHX38ibZfevcdLArKiasGOjjq09V8ficZCA5FGA/0?wx_fmt=jpeg&quot",
-    category: "对齐",
-    url: "https://mp.weixin.qq.com/s/3fDOijSKF2hCO4LeJ6pvYg"
-  },
-  {
-    id: 6,
-    title: "AI大模型学习速成之路",
-    date: "2025-10",
-    readTime: "6分钟",
-    excerpt: "针对零基础读者的AI大模型快速入门指南。提炼核心知识点，避开学习坑点，在最短时间内建立系统认知。",
-    image: "https://mmbiz.qpic.cn/sz_mmbiz_jpg/M7qVOd4BYQ260HuAnHftTg5ehC2KTonhdlLRIsP513K3PDelSz05NaSiaqj8uic8qsublica6gRXdPHZMC3Vh3Hibl8cfhvk702ialkI0LR7K6VI/0?wx_fmt=jpeg&quot",
-    category: "效率",
-    url: "https://mp.weixin.qq.com/s/5OlHjOTGMj-HalqfjLs0xg"
-  }
-];
 
 const PROJECTS: Project[] = [
   { 
@@ -389,7 +315,14 @@ const About = () => (
   </div>
 );
 
-const Articles = () => (
+const Articles = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 6;
+  const totalPages = Math.max(1, Math.ceil(ARTICLES.length / articlesPerPage));
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const paginatedArticles = ARTICLES.slice(startIndex, startIndex + articlesPerPage);
+
+  return (
   <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto space-y-16">
     <div className="space-y-6">
       <h2 className="text-7xl font-black flex items-center gap-4">
@@ -410,7 +343,7 @@ const Articles = () => (
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {ARTICLES.map((article) => (
+      {paginatedArticles.map((article) => (
         <a 
           key={article.id} 
           href={article.url}
@@ -449,6 +382,38 @@ const Articles = () => (
       ))}
     </div>
 
+    <div className="flex items-center justify-center gap-3 flex-wrap">
+      <button
+        onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+        disabled={currentPage === 1}
+        className="neo-button rounded-xl bg-white disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        上一页
+      </button>
+
+      {Array.from({ length: totalPages }, (_, index) => {
+        const pageNumber = index + 1;
+        const isActive = pageNumber === currentPage;
+        return (
+          <button
+            key={pageNumber}
+            onClick={() => setCurrentPage(pageNumber)}
+            className={`neo-button rounded-xl min-w-12 ${isActive ? 'bg-black text-white' : 'bg-white'}`}
+          >
+            {pageNumber}
+          </button>
+        );
+      })}
+
+      <button
+        onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+        disabled={currentPage === totalPages}
+        className="neo-button rounded-xl bg-white disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        下一页
+      </button>
+    </div>
+
     <div className="flex justify-center pt-8">
       <button 
         onClick={() => window.open('https://mp.weixin.qq.com/s/example1', '_blank')}
@@ -475,7 +440,8 @@ const Articles = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('全部');
